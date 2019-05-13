@@ -51,12 +51,27 @@ public class Main {
 
     }
 
+    public static void
+    displayBoard(int mistakes) {
+        switch (mistakes) {
 
 
+            case 0:
+                System.out.println();
 
+        }
 
 
 
 
     }
+
+
+
+
+
+
+
+
+
 }
