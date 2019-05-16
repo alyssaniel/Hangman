@@ -21,9 +21,9 @@ public class Main {
 
         //ints
         int mistakes = 0;
-        int tries = 15;
+        int tries = 13;
         int choice = generator.nextInt(words.length);
-
+        int wordTowin;
         String secretWord = words[choice];
 
         System.out.println(secretWord);
@@ -46,6 +46,7 @@ public class Main {
         displayBoard(mistakes);
         for ( int i = 0 ; i < secretWord.length() ; i++ ) {
             System.out.print("_ ");
+            wordTowin = keyboard.nextInt();
         }
 
 
@@ -75,12 +76,91 @@ public class Main {
                                 "|                 |                 \n" +
                                 "|                 |                 \n" +
                                 "|                 |                 \n" +
-                                "|                 o                 \n" +
+                                "|                 0                \n" +
                                 "|                                   \n" +
                                 "|                                   \n" +
                                 "|                                   \n" +
                                 "|                                   \n" +
                                 "_______________________________");
+                break;
+            case 2:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 0                 \n" +
+                                "|                 |                  \n" +
+                                "|                                   \n" +
+                                "|                                 \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
+            case 3:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 0                 \n" +
+                                "|                -|                  \n" +
+                                "|                                   \n" +
+                                "|                                 \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
+            case 4:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 0                 \n" +
+                                "|                -|-                  \n" +
+                                "|                                   \n" +
+                                "|                                 \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
+            case 5:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 0                 \n" +
+                                "|               --|--                  \n" +
+                                "|                 |                  \n" +
+                                "|                                 \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
+            case 6:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 o                 \n" +
+                                "|               --|--                  \n" +
+                                "|                 |                  \n" +
+                                "|                /                \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
+            case 7:
+                System.out.println(
+                        "------------------+                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 |                 \n" +
+                                "|                 o                 \n" +
+                                "|               --|--                  \n" +
+                                "|                 |                  \n" +
+                                "|                /                  \n" +
+                                "|                                   \n" +
+                                "_______________________________");
+                break;
         }
 
 
