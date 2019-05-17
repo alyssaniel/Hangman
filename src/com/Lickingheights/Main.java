@@ -54,6 +54,9 @@ public class Main {
         }
         while (winner == true){
             System.out.println("Correct!");
+            if (secretWord.indexOf(userGuess) <= 0){
+                lettersRight += userGuess;
+            }
 
 
 
