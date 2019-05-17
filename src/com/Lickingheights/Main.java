@@ -23,6 +23,7 @@ public class Main {
         int mistakes = 0;
         int tries = 15;
         int choice = generator.nextInt(words.length);
+        int wordTowin;
         boolean winner = false;
         String secretWord = words[choice];
 
@@ -30,6 +31,7 @@ public class Main {
 
 
         System.out.println("Welcome to Hangman.");
+
         while (winner == false) {
             System.out.println("Guess a letter:");
             userGuess = keyboard.nextLine();
@@ -50,6 +52,14 @@ public class Main {
 
 
         }
+        while (winner == true){
+            System.out.println("Correct!");
+
+
+
+        }
+
+
     }
 
         public static void displayBoard ( int mistakes){
