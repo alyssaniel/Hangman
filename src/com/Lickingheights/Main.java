@@ -19,20 +19,22 @@ public class Main {
         String[] words = {"cat", "love", "programming", "updates", "grapes"};
         String userGuess = null;
 
+
         //ints
         int mistakes = 0;
         int tries = 15;
         int choice = generator.nextInt(words.length);
         int wordTowin;
-        boolean winner = false;
+        boolean solved = false;
         String secretWord = words[choice];
+        boolean allthere = false;
 
         System.out.println(secretWord);
 
 
         System.out.println("Welcome to Hangman.");
 
-        while (winner == false) {
+        while (solved == false) {
             System.out.println("Guess a letter:");
             userGuess = keyboard.nextLine();
 
@@ -46,21 +48,25 @@ public class Main {
             }
             displayBoard(mistakes);
             for (int i = 0; i < secretWord.length(); i++) {
-
+                if ( 0 <= lettersGuessed.indexOf( secretWord.charAt(i) ) ){
+                    allthere =true;
+                }else {
+                    allthere =false;
+                }
 
             }
 
 
         }
-        while (winner == true){
-            System.out.println("Correct!");
-            if (secretWord.indexOf(userGuess) <= 0){
-                lettersRight += userGuess;
-            }
-
-
+        if ( allthere == true ){
+            solved =true;
 
         }
+
+        System.out.println("Correct!");
+        System.out.println("Thanks for playing!");
+
+
 
 
     }
@@ -292,6 +298,8 @@ public class Main {
                                     "|                - -                \n" +
                                     "|             *_(   )_*             \n" +
                                     "_______________________________");
+
+                    System.out.println("Sorry, you lose!");
 
                     break;
 
